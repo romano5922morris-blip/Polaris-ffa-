@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="alternate icon" href="favicon.ico">
+<link rel="apple-touch-icon" href="favicon.png">
+<meta name="theme-color" content="#08111d">
+<link rel="preload" href="assets/fonts/big-shoulders-display-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="style.css">
+<script src="protect.js"></script>
+<title>PolarisFFA | Serveur Minecraft PvP</title>
+<meta name="description" content="PolarisFFA est un serveur Minecraft PvP en free for all avec deux modes : SpearMace et DiamondSMP. IP : play.polarisffa.eu">
+</head>
+<body>
+<canvas id="snow" aria-hidden="true"></canvas>
+<nav>
+<a class="brand" href="index.html"><b>✦</b> POLARISFFA</a>
+<ul><li><a href="index.html#modes">Modes</a></li><li><a href="index.html#rejoindre">Rejoindre</a></li><li id="navgal" hidden><a href="index.html#galerie">Photos</a></li><li><a href="index.html#staff">Staff</a></li><li><a href="index.html#boosts">Boosts</a></li><li><a href="index.html#communaute">Communauté</a></li></ul>
+</nav>
+<header class="hero" id="top">
+<div class="hero-bg"></div>
+<div class="hero-in">
+<p class="eyebrow">Free for all</p>
+<h1>Polaris<span>FFA</span></h1>
+<p class="tag">Serveur Minecraft PvP. SpearMace et DiamondSMP sur la même IP.</p>
+<div class="ipline"><span class="ipbox">play.polarisffa.eu</span><button class="btn" data-copy><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><rect x="9" y="9" width="12" height="12" rx="1"/><path d="M5 15V5a1 1 0 0 1 1-1h10"/></svg>Copier l'IP</button></div>
+<p class="live"><span class="dot" id="dot"></span><span id="livetxt">Vérification du serveur</span></p>
+</div>
+</header>
+<main>
+<section id="modes">
+<div class="sh"><span class="num">01</span><h2>Modes de jeu</h2></div>
+<div class="modes">
+<article class="mode"><span class="big">01</span><h3>SpearMace</h3><p class="k">Master the weapons</p><p>Combats à la lance et à la masse.</p></article>
+<article class="mode"><span class="big">02</span><h3>DiamondSMP</h3><p class="k">Fight, build, survive</p><p>Survie et construction, avec du PvP.</p></article>
+</div>
+</section>
+<section id="rejoindre">
+<div class="sh"><span class="num">02</span><h2>Rejoindre</h2></div>
+<div class="join">
+<div><span class="num">1</span><h3>Multijoueur</h3><p>Ouvre Minecraft et va dans Multijoueur.</p></div>
+<div><span class="num">2</span><h3>Ajouter un serveur</h3><p>Colle play.polarisffa.eu dans le champ adresse.</p></div>
+<div><span class="num">3</span><h3>Connexion</h3><p>Rejoins le serveur et choisis ton mode.</p></div>
+</div>
+</section>
+<section id="galerie" hidden>
+<div class="sh"><span class="num">03</span><h2>Photos</h2></div>
+<div class="gal" id="gal"></div>
+</section>
+<section id="staff">
+<div class="sh"><span class="num">04</span><h2>Staff</h2></div>
+<div id="stafflist"></div>
+</section>
+<section id="boosts">
+<div class="sh"><span class="num">05</span><h2>Boosts Discord</h2></div>
+<div class="boost">
+<p class="lead">Les récompenses dépendent du nombre de boosts sur le serveur Discord. Chaque ligne du tableau correspond à un palier.</p>
+<ol class="ladder" id="rewardlist"></ol>
+</div>
+</section>
+<section id="communaute">
+<div class="sh"><span class="num">06</span><h2>Communauté</h2></div>
+<div class="links">
+<a href="https://discord.gg/5UHbcYuntc" target="_blank" rel="noopener"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v11H11l-4 4v-4H4z"/></svg><span><b>Discord</b><small>discord.gg/5UHbcYuntc</small></span></a>
+<a href="https://www.youtube.com/@PolarisFFA" target="_blank" rel="noopener"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="6" width="18" height="12" rx="3"/><path d="M10 9.5v5l4.5-2.5z"/></svg><span><b>YouTube</b><small>@PolarisFFA</small></span></a>
+</div>
+</section>
+</main>
+<footer>
+<div class="fin">
+<div><a class="brand" href="index.html" style="display:inline"><b>✦</b> POLARISFFA</a><p style="margin-top:.5rem">Serveur Minecraft PvP en free for all.<br>play.polarisffa.eu</p></div>
+<div><h4>Site</h4><a href="index.html#modes">Modes</a><a href="index.html#staff">Staff</a><a href="index.html#boosts">Boosts</a></div>
+<div><h4>Légal</h4><a href="confidentialite.html">Confidentialité</a><a href="cgu.html">CGU</a></div>
+</div>
+<div class="fb">© <span class="yr">2026</span> PolarisFFA. Hébergé par NorthService. Non affilié à Mojang ni à Microsoft.</div>
+</footer>
+<script>document.querySelectorAll(".yr").forEach(function(e){e.textContent=new Date().getFullYear()})</script>
+<div id="lb" role="dialog" aria-modal="true" aria-label="Photo"><button class="x" aria-label="Fermer">×</button><button class="p" aria-label="Précédente">‹</button><div><img alt=""><p></p></div><button class="n" aria-label="Suivante">›</button></div>
+<div id="toast" role="status">IP copiée : play.polarisffa.eu</div>
+<script>
+const IP="play.polarisffa.eu";
+const STAFF=[
+{r:"Owner",c:"#FFAA00",m:["ZFRnaelYT"]},
+{r:"Co-owner",c:"#FFEE55",m:["ThatImault"]},
+{r:"Head admin",c:"#FF5555",m:["ItzLucaGaming","Ninjago57"]},
+{r:"Admin",c:"#FF8C1A",m:["layzzbox","LouisLLTO","Loupp7"]},
+{r:"Helper",c:"#55FF55",m:["Mylou17","Kohaky","Risio91","REX","KaiFootGoat"]}];
+const REWARDS=[[1,"Rôle VIP"],[3,"15 Tokens"],[5,"1 Token compressé"],[8,"2 Tokens compressés"],[10,"3 Tokens compressés"],[12,"4 Tokens compressés"],[15,"Rôle Netherite"]];
+const $=id=>document.getElementById(id);
+const RM=matchMedia("(prefers-reduced-motion:reduce)").matches;
+let tt;
+function toast(){const t=$("toast");t.classList.add("show");clearTimeout(tt);tt=setTimeout(()=>t.classList.remove("show"),2200)}
+function fb(ok){const t=document.createElement("textarea");t.value=IP;document.body.appendChild(t);t.select();try{document.execCommand("copy");ok()}catch(e){}t.remove()}
+function copyIP(){if(navigator.clipboard&&isSecureContext)navigator.clipboard.writeText(IP).then(toast,()=>fb(toast));else fb(toast)}
+document.querySelectorAll("[data-copy]").forEach(b=>b.onclick=copyIP);
+const dot=$("dot"),lt=$("livetxt");
+async function ping(){
+ try{
+  const j=await (await fetch("https://api.mcsrvstat.us/3/"+IP,{cache:"no-store"})).json();
+  if(j.online){const n=j.players?.online??0;dot.className="dot on";lt.innerHTML="<b>"+n+"</b> joueur"+(n>1?"s":"")+" en ligne"}
+  else{dot.className="dot";lt.textContent="Serveur hors ligne"}
+ }catch(e){dot.className="dot";lt.textContent="Nombre de joueurs indisponible"}}
+ping();setInterval(()=>{if(!document.hidden)ping()},120000);
+let PHOTOS={};
+function buildStaff(){const sl=$("stafflist");STAFF.forEach(t=>{
+ const d=document.createElement("div");d.className="tier";d.style.setProperty("--c",t.c);
+ const h=document.createElement("h3");h.textContent=t.r;d.appendChild(h);
+ const g=document.createElement("div");g.className="staff";
+ t.m.forEach(n=>{
+  const c=document.createElement("div");c.className="card";c.style.setProperty("--c",t.c);
+  const i=new Image();i.alt="";i.loading="lazy";i.width=64;i.height=64;
+  const rem="https://mc-heads.net/avatar/"+encodeURIComponent(n)+"/80";
+  const steps=[PHOTOS[n],"assets/staff/"+encodeURIComponent(n)+".png",rem,"https://mc-heads.net/avatar/MHF_Steve/80"].filter(Boolean);let k=0;
+  i.src=steps[0];i.onerror=()=>{if(++k<steps.length)i.src=steps[k]};
+  const s=document.createElement("span");s.textContent=n;
+  c.append(i,s);g.appendChild(c)});
+ d.appendChild(g);sl.appendChild(d)})}
+fetch("photos.json",{cache:"no-cache"}).then(r=>r.ok?r.json():{}).catch(()=>({})).then(j=>{PHOTOS=j&&typeof j==="object"?j:{}}).finally(buildStaff);
+const rl=$("rewardlist");
+REWARDS.forEach(([n,r])=>{const li=document.createElement("li");
+ const a=document.createElement("b");a.textContent=n+(n===1?" boost":" boosts");
+ const b=document.createElement("span");b.textContent=r;li.append(a,b);rl.appendChild(li)});
+const items=[];let cur=0;
+function buildGal(list){const g=$("gal");
+ list.forEach(x=>{const o=typeof x==="string"?{src:x}:x;if(!o||!o.src)return;
+  const b=document.createElement("button");const im=new Image();im.loading="lazy";im.alt=o.caption||"Photo du serveur";im.src=o.src;
+  im.onload=()=>{items.push(o);const idx=items.length-1;b.onclick=()=>open(idx);$("galerie").hidden=false;$("navgal").hidden=false};
+  im.onerror=()=>b.remove();b.appendChild(im);
+  if(o.caption){const s=document.createElement("span");s.textContent=o.caption;b.appendChild(s)}
+  g.appendChild(b)})}
+fetch("gallery.json",{cache:"no-cache"}).then(r=>r.ok?r.json():[]).catch(()=>[]).then(j=>buildGal(Array.isArray(j)?j:[]));
+const lb=$("lb"),li_=lb.querySelector("img"),lp=lb.querySelector("p");
+function show(){const o=items[cur];li_.src=o.src;lp.textContent=o.caption||""}
+function open(i){cur=i;show();lb.classList.add("open")}
+function step(d){cur=(cur+d+items.length)%items.length;show()}
+lb.querySelector(".x").onclick=()=>lb.classList.remove("open");
+lb.querySelector(".p").onclick=()=>step(-1);lb.querySelector(".n").onclick=()=>step(1);
+lb.onclick=e=>{if(e.target===lb)lb.classList.remove("open")};
+addEventListener("keydown",e=>{if(!lb.classList.contains("open"))return;if(e.key==="Escape")lb.classList.remove("open");if(e.key==="ArrowLeft")step(-1);if(e.key==="ArrowRight")step(1)});
+(()=>{if(RM)return;const c=$("snow"),x=c.getContext("2d");let w,h;const N=innerWidth<700?16:30,p=[];
+ function size(){w=c.width=innerWidth;h=c.height=innerHeight}size();addEventListener("resize",size);
+ for(let i=0;i<N;i++)p.push({x:Math.random()*w,y:Math.random()*h,r:Math.random()*1.4+.5,v:Math.random()*.3+.1,d:Math.random()*6});
+ (function f(){if(!document.hidden){x.clearRect(0,0,w,h);x.fillStyle="rgba(167,243,255,.35)";
+  p.forEach(q=>{q.y+=q.v;q.x+=Math.sin(q.y/60+q.d)*.2;if(q.y>h){q.y=-4;q.x=Math.random()*w}x.beginPath();x.arc(q.x,q.y,q.r,0,6.3);x.fill()})}requestAnimationFrame(f)})()})();
+</script>
+</body>
+</html>
